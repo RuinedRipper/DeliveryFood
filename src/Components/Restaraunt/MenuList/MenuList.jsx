@@ -16,7 +16,7 @@ const MenuData = [
     name: "Ролл угор стандарт",
     image: image1,
     Description: "Рис, угор, соус унагі, кунжут, водорості норі.",
-    Price: 250,
+    Price: 4,
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const MenuData = [
     image: image2,
     Description:
       "Рис, лосось, авокадо, огірок, майонез, ікра масаго, водорості норі.",
-    Price: 395,
+    Price: 5,
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const MenuData = [
     image: image3,
     Description:
       "Рис, креветка варена, сир вершковий, лосось, огірок свіжий...",
-    Price: 250,
+    Price: 5,
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const MenuData = [
     image: image4,
     Description:
       "Рис, куряча грудка копчена, ікра масаго, томат, айсберг, соус цезар...",
-    Price: 250,
+    Price: 4,
   },
   {
     id: 5,
@@ -48,14 +48,14 @@ const MenuData = [
     image: image5,
     Description:
       "Рис, помідор свіжий, перець болгарський, авокадо, огірок, айсберг",
-    Price: 250,
+    Price: 4,
   },
   {
     id: 6,
     name: "Ролл з креветкою стандарт",
     image: image6,
     Description: "Рис, водорості норі, креветки варені, сир вершковий, огірки",
-    Price: 250,
+    Price: 4,
   },
 ];
 

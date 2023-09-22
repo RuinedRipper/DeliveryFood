@@ -11,10 +11,10 @@ const RestarauntMenu = (props) => {
         <p className={styles.Description}>{props.Description}</p>
         <section className={styles.ButtonAndPrice}>
           <button className={styles.Cart}>
-            В корзину
+            До кошика
             <img src={Cart} alt="Add to Cart" />
           </button>
-          <p className={styles.Price}>{props.Price} ₽</p>
+          <p className={styles.Price}>{props.Price} $</p>
         </section>
       </section>
     </section>
