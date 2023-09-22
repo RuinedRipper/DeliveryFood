@@ -15,7 +15,7 @@ const dishData = [
     id: 1,
     name: "Піцца плюс",
     image: image1,
-    to: "/restaurant",
+    to: "/",
   },
   {
     id: 2,
@@ -27,25 +27,25 @@ const dishData = [
     id: 3,
     name: "FoodBand",
     image: image3,
-    to: "/restaurant",
+    to: "/",
   },
   {
     id: 4,
     name: "Жадина-піцца",
     image: image4,
-    to: "/restaurant",
+    to: "/",
   },
   {
     id: 5,
     name: "Точка їжі",
     image: image5,
-    to: "/restaurant",
+    to: "/",
   },
   {
     id: 6,
     name: "PizzaBurger",
     image: image6,
-    to: "/restaurant",
+    to: "/",
   },
 ];
 
