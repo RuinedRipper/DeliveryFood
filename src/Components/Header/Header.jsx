@@ -9,7 +9,7 @@ import Cart from "../../Images/cart.png";
 const Header = () => {
   return (
     <section className={styles.HeaderContain}>
-      <NavLink className={styles.Logo} to="/">
+      <NavLink className={styles.Logo} to="/DeliveryFood">
         <img src={Logo} alt="Логотип" />
         <span>
           <p>Delivery</p>
