@@ -48,7 +48,7 @@ const AuthModal = (props) => {
           }`}
           type="text"
           ref={UserName}
-          placeholder="Введите имя пользователя"
+          placeholder="Введіть ім'я користувача"
           onFocus={LogInFocusHandler}
         />
         {!IsValid && (
