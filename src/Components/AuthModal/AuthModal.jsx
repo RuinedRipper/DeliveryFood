@@ -41,7 +41,7 @@ const AuthModal = (props) => {
   return (
     <Modal onHideCart={closeModal} isOpen={isModalOpen}>
       <section className={styles.AuthContain}>
-        <h1>Авторизация</h1>
+        <h1>Авторизація</h1>
         <input
           className={`${IsValid !== true ? styles.ErrorBorder : ""} ${
             styles.AuthInput
@@ -52,10 +52,10 @@ const AuthModal = (props) => {
           onFocus={LogInFocusHandler}
         />
         {!IsValid && (
-          <p className={styles.ErrorText}>Имя пользователя некорректно</p>
+          <p className={styles.ErrorText}>Невірно ім'я користувача</p>
         )}
         <button className={styles.LogIn} onClick={LogInHandler}>
-          Войти
+          Увійти
         </button>
       </section>
     </Modal>
