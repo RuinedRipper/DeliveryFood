@@ -7,6 +7,8 @@ import Home from "../../Images/home.png";
 import User from "../../Images/user.png";
 import CartImage from "../../Images/cart.png";
 import { useState } from "react";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import { useEffect } from "react";
 
 import { useDispatch } from "react-redux";
 import { logout } from "../../Store/loginSlice";
@@ -18,6 +20,14 @@ const Header = () => {
   const [IsAuth, setIsAuth] = useState(false);
   const [isOpenCart, setOpenCart] = useState(false);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (IsOpenAuth && !IsAuth) {
+      disableBodyScroll(document.body);
+    } else {
+      enableBodyScroll(document.body);
+    }
+  }, [IsOpenAuth, IsAuth]);
 
   const openCart = () => {
     setOpenCart(true);
