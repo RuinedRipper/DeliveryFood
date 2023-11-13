@@ -64,7 +64,7 @@ const Cart = (props) => {
                     className={styles.CancelOrder}
                     onClick={closeModalAndClear}
                   >
-                    Скасувати
+                    Відміна
                   </button>
                 </section>
               </section>

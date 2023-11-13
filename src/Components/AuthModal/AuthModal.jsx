@@ -51,7 +51,7 @@ const AuthModal = (props) => {
           onFocus={LogInFocusHandler}
         />
         {!IsValid && (
-          <p className={styles.ErrorText}>Невірно ім'я користувача</p>
+          <p className={styles.ErrorText}>Невірне ім'я користувача</p>
         )}
         <button className={styles.LogIn} onClick={LogInHandler}>
           Увійти

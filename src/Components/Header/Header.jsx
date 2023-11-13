@@ -1,4 +1,5 @@
 import styles from "./Header.module.css";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import AuthModal from "../AuthModal/AuthModal";
 import Cart from "../Cart/Cart";
 import { NavLink } from "react-router-dom";
@@ -8,12 +9,9 @@ import User from "../../Images/user.png";
 import CartImage from "../../Images/cart.png";
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
-import { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../Store/loginSlice";
-import { useSelector } from "react-redux";
 
 const Header = () => {
   const isLogin = useSelector((state) => state.login.isLogin);
@@ -80,13 +78,13 @@ const Header = () => {
 
         {isLogin && (
           <button className={styles.Login} onClick={handleLogout}>
-            <img src={User} alt="Пользователь" />
+            <img src={User} alt="Користувач" />
             Вийти
           </button>
         )}
 
         <button className={styles.Cart} onClick={openCart}>
-          <img src={CartImage} alt="Корзина" />
+          <img src={CartImage} alt="Кошик" />
           Кошик
         </button>
 

@@ -4,13 +4,13 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import "./index.css";
-
 import Home from "./Pages/Home.jsx";
 import Restaurant from "./Pages/Restaraunt.jsx";
 
 function App() {
   const isLogin = useSelector((state) => state.login.isLogin);
   const [IsOpenAuth, setOpenAuth] = useState(true);
+
   const closeAuthModal = () => {
     setOpenAuth(true);
   };

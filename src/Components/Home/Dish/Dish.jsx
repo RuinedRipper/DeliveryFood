@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Dish = (props) => {
   return (
     <Link className={styles.DishContain} to={props.to}>
-      <img src={props.image} alt="Restaraunt" />
+      <img src={props.image} alt="Restoran" />
       <section className={styles.DishDescription}>
         <section className={styles.DishNameSection}>
           <h2 className={styles.DishName}>{props.DishName}</h2>

@@ -9,9 +9,9 @@ const RestarauntMain = () => {
         <h1>Танукі</h1>
         <img src={Rating} />
         <p className={styles.Rating}>4.99</p>
-        <p className={styles.Price}>Від 5$</p>
+        <p className={styles.Price}>Від 5 $</p>
         <ul>
-          <li>Піцца и суші</li>
+          <li>Піцці і суші</li>
         </ul>
       </section>
       <MenuList />
