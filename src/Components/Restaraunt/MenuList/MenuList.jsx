@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Menu from "../Menu/RestarauntMenu";
-import menuData from "../../../Data/TanukiMenuData.json";
 import { useParams } from "react-router-dom";
 
 import image1 from "../../../Images/Menu/image1.png";
@@ -12,27 +12,33 @@ import image6 from "../../../Images/Menu/image6.png";
 
 import styles from "./MenuList.module.css";
 
-import FoodBandMenuData from "../../../Data/FoodBandMenuData.json";
-import FoodPointMenuData from "../../../Data/FoodPointMenuData.json";
-import GreedyPizzaMenuData from "../../../Data/GreedyPizzaMenuData.json";
-import PizzaBurgerMenuData from "../../../Data/PizzaBurgerMenuData.json";
-import PizzaPlusMenuData from "../../../Data/PizzaPlusMenuData.json";
-import TanukiMenuData from "../../../Data/TanukiMenuData.json";
-
 const images = [image1, image2, image3, image4, image5, image6];
-const allMenus = [
-  TanukiMenuData,
-  FoodBandMenuData,
-  FoodPointMenuData,
-  GreedyPizzaMenuData,
-  PizzaBurgerMenuData,
-  PizzaPlusMenuData,
-];
 
 const MenuList = () => {
+  const [menuData, setMenuData] = useState([]);
   const { restaurantId } = useParams();
-  const menuIndex = parseInt(restaurantId, 10) - 1;
-  const menuData = allMenus[menuIndex] || [];
+  useEffect(() => {
+    const menuUrls = {
+      1: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/TanukiMenuData.json",
+      2: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/FoodBandMenuData.json",
+      3: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/FoodPointMenuData.json",
+      4: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/GreedyPizzaMenuData.json",
+      5: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/PizzaBurgerMenuData.json",
+      6: "https://deliveryfoodbd-b280d-default-rtdb.europe-west1.firebasedatabase.app/PizzaPlusMenuData.json",
+    };
+
+    const menuUrl = menuUrls[restaurantId] || "";
+    if (menuUrl) {
+      axios
+        .get(menuUrl)
+        .then((response) => {
+          setMenuData(response.data || []);
+        })
+        .catch((error) => {
+          console.error("Помилка при завантаженні даних меню:", error);
+        });
+    }
+  }, [restaurantId]);
 
   return (
     <section className={styles.Contain}>

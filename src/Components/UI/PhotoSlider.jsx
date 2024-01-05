@@ -19,13 +19,24 @@ const PhotoSlider = () => {
   const handleWheel = (e) => {
     e.preventDefault();
 
-    if (e.deltaY > 0) {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    } else {
-      setCurrentIndex(
-        (prevIndex) => (prevIndex - 1 + images.length) % images.length
-      );
+    switch (e.deltaY) {
+      case e.deltaY > 0:
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        break;
+      default:
+        setCurrentIndex(
+          (prevIndex) => (prevIndex - 1 + images.length) % images.length
+        );
+        break;
     }
+
+    // if (e.deltaY > 0) {
+    //   setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    // } else {
+    //   setCurrentIndex(
+    //     (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    //   );
+    // }
   };
 
   useEffect(() => {
